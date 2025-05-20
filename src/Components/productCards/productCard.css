@@ -1,0 +1,13 @@
+.smallCard{
+    width: 25%;
+    height: 50%;
+    background-color: rgb(219, 255, 219);
+    margin: 1px;
+}
+
+.largeCard{
+    width: 50%;
+    height: 100%;
+    background-color: rgb(219, 255, 219);
+    margin: 1px;
+}
