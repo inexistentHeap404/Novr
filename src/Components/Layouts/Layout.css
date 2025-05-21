@@ -55,3 +55,38 @@ nav ul li{
 .showcase{
     height: 100vh;
 }
+
+
+/* External code begins */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr;
+  border: 1px solid black;
+}
+
+.left-product {
+  background: white;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.right-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    border: 1px solid black;
+}
+
+.left-product > div , .right-products > div{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.ProductImages{
+    object-fit: contain;
+}

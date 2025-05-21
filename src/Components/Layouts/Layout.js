@@ -1,4 +1,5 @@
 import "./Layout.css";
+import ProductCard from "../productCards/productCard";
 export default function Layout(){
     return(
         <div className="parent">
@@ -17,6 +18,25 @@ export default function Layout(){
             </section>
             <section className="showcase">
                 <div className="showcaseGrid">
+                    <div className="product-grid">
+                        <div className="left-product">
+                            <ProductCard source={"InitialProductCards/BlueT.jpg"} className="ProductImages" />
+                            </div>
+                            <div className="right-products">
+                                <div>
+                                    <ProductCard source={"./InitialProductCards/BlueT.jpg"} className="ProductImages" />
+                                </div>
+                                <div>
+                                    <ProductCard source={"./InitialProductCards/BlackT.jpg"} className="ProductImages" />
+                                </div>
+                                <div>
+                                    <ProductCard source={"InitialProductCards/BlackT.jpg"} className="ProductImages" />
+                                </div>
+                                <div>
+                                    <ProductCard source={"InitialProductCards/BlackT.jpg"} className="ProductImages" />
+                                </div>
+                            </div>
+                    </div>
                 </div>
             </section>
         </div>
