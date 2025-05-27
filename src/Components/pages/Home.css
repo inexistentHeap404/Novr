@@ -1,0 +1,87 @@
+.quote{
+    font-size: 500%;
+    user-select: none;
+}
+.quoteSect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.showcase{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    height: 100vh;
+}
+
+.stepCard{
+    background-color: #cfcfcf75;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.tryOutCard{
+    display: flex;
+    background-color: #cfcfcf75;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    gap: 2rem;
+}
+
+.tryOutCard > button{
+    font-size: x-large;
+    background-color: black;
+    border: 0px solid transparent;
+    border-radius: 40px;
+    color: white;
+    padding: 10px 30px 10px 30px;
+}
+
+.tryOutCard > button:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.browse_try{
+    display: grid;
+    height: 200vh;
+}
+
+
+.browse_try .ai_try{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    display: block;
+    height: 50%;
+}
+.background_card{
+    background-color: white;
+    border: 0px;
+    border-radius: 80px;
+    width: 425px;
+    height: 525px;
+}
+
+
+.foreground_card{
+    width: 425px;
+    height: 525px;
+    background-color: black;
+    position: relative;
+    border: 0;
+    border-radius: 80px;
+    left: calc(0% + 50px);
+    top: 40%;
+    transform: rotate(5deg);
+}

@@ -2,6 +2,7 @@ import "./Layout.css";
 import Home from "../pages/Home";
 import {useEffect, useState} from "react";
 export default function Layout(){
+    const [isLoggedIn, changeLogin] = useState(false);
     const [showNav, changeShowNav] = useState(true);
     useEffect(()=>{
         const handleScroll = ()=>{
@@ -23,8 +24,8 @@ export default function Layout(){
                         <div>novr</div>
                         <ul>
                             <li>home</li>
-                            <li>about</li>
                             <li>novrVision</li>
+                            <li>{isLoggedIn ? "profile" : "login"}</li>
                         </ul>
                     </nav>)
                 }
