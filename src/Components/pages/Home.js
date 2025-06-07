@@ -5,7 +5,7 @@ export default function Home(){
         <>
             <section className="quoteSect">
                 <div className="quote">
-                    <i>infinity</i> now has shelves
+                    <i>infinity</i> has shelves now
                 </div>
             </section>
             <section className="showcase">

@@ -1,0 +1,59 @@
+.parentGenerator{
+    background-color: rgba(91, 91, 91, 0);
+}
+
+.parentG{
+    width: 100vw;
+    height: 100vh;
+}
+
+.designShowcase{
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.chatbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    padding: 20px 40px 20px 40px;
+    width: 30%;
+    border: 0;
+    border-radius: 40px;
+    outline: none;
+    font-size: x-large;
+    z-index: 1;
+}
+
+.uparrowButton{
+    font-size: xx-large;
+    padding: 15px 25px 15px 40px;
+    border: 0;
+    position: relative;
+    right: 30px;
+    border-radius: 0px 40px 40px 0px;
+}
+
+.colorPicker{
+    width: 36%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 30.5%;
+    padding: 20px 10px 20px 10px;
+    border-radius: 40px;
+    background-color: rgb(214, 214, 214);
+}
+
+.centerTag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}

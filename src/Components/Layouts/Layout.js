@@ -1,36 +1,27 @@
 import "./Layout.css";
-import Home from "../pages/Home";
-import {useEffect, useState} from "react";
+import { Link, Outlet } from "react-router-dom";
 export default function Layout(){
-    const [isLoggedIn, changeLogin] = useState(false);
-    const [showNav, changeShowNav] = useState(true);
-    useEffect(()=>{
-        const handleScroll = ()=>{
-            if(window.scrollY >= 100){
-                changeShowNav(false);
-            }
-            else{
-                changeShowNav(true);
-            }
-        }
-        window.addEventListener("scroll", handleScroll);
-    })
     return(
         <div className="parent">
             <section>
-                {
-                    showNav &&
-                    (<nav>
-                        <div>novr</div>
-                        <ul>
-                            <li>home</li>
-                            <li>novrVision</li>
-                            <li>{isLoggedIn ? "profile" : "login"}</li>
-                        </ul>
-                    </nav>)
-                }
+                    <nav>
+                        <div className="bname">novr</div>
+                            <ul>
+                                <li>
+                                    <Link to="/">Home</Link>
+                                </li>
+                                <li>
+                                    <Link to="/novrVision">novrVision</Link>
+                                </li>
+                                <li>
+                                    <Link to="/auth">
+                                        profile
+                                    </Link>
+                                </li>
+                            </ul>
+                    </nav>
             </section>
-            <Home />
+            <Outlet />
         </div>
     )
 }
