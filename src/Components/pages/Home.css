@@ -35,7 +35,7 @@
     gap: 2rem;
 }
 
-.tryOutCard > button{
+.tryOutCard > * > button{
     font-size: x-large;
     background-color: black;
     border: 0px solid transparent;
@@ -44,7 +44,7 @@
     padding: 10px 30px 10px 30px;
 }
 
-.tryOutCard > button:hover{
+.tryOutCard > * > button:hover{
     background-color: white;
     color: black;
     transition: all 0.2s ease;
@@ -104,7 +104,7 @@
     gap: 2rem;
 }
 
-.tagline_holder > button{
+.tagline_holder > * > button{
     font-size: x-large;
     background-color: black;
     border: 0px solid transparent;
@@ -113,7 +113,7 @@
     padding: 10px 30px 10px 30px;   
 }
 
-.tagline_holder > button:hover{
+.tagline_holder > * > button:hover{
     background-color: white;
     color: black;
     transition: all 0.2s ease;

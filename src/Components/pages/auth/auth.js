@@ -9,6 +9,12 @@ export default function Auth(){
     const [confirmPasswordType, setConfirmPasswordType] = useState("password");
     return(
         <section className="authParent">
+            <div className="register_hero">
+                Be a part of the 
+                <i>
+                    <b>future</b>
+                </i>
+            </div>
             <div className="secondParent">
                 <div className="google"></div>
                 <div className="register">
@@ -70,6 +76,7 @@ export default function Auth(){
                         <input type="submit" value="Register" className="submit_button_reg" />
                         <div className="alternate_signin_link">Already a member? <Link to="/authLogin">Sign in</Link> </div>
                     </div>
+                    <Outlet />
                 </div>
             </div>
         </section>
