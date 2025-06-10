@@ -1,34 +1,62 @@
+import { AllInclusiveOutlined, HomeOutlined, PersonOutlineOutlined, ShoppingBagOutlined, ArrowDropUpOutlined } from "@mui/icons-material"
+import ArrowUpwardOutlinedIcon from '@mui/icons-material/ArrowUpwardOutlined';
 import "./enso.css"
-import ProductCard from "../../productCards/productCard"
-
-function processPrompt(){
-
-    return 0;
-}
-
-
-
-export default function enso(){
+import { Link } from "react-router-dom"
+export default function Enso(){
     return(
-        <>
-            <section className="parentGenerator">
-                <div className="parentG">
-                    <div className="designShowcase">
-                        <div>
-                            <ProductCard />
-                        </div>
-                        <div>
-                            <ProductCard />
-                        </div>
-                    </div>
-                    <center className="centerTag">
-                        <div className="chatbar">
-                            <input placeholder="Wear anything" />
-                            <button className="uparrowButton" onClick={processPrompt}>↑</button>
-                        </div>
-                    </center>
+        <div className="ensoParent">
+            <div className="ensoNav">
+                <div className="heroName">
+                    <div className="hero">enso</div>
+                    <div className="subHero">by novr</div>
                 </div>
-            </section>
-        </>
+                <ul>
+                    <li>
+                        <Link to="/">
+                            <HomeOutlined />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/cart">
+                            <ShoppingBagOutlined />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/infinityStore">
+                            <AllInclusiveOutlined />
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/auth">
+                            <PersonOutlineOutlined />
+                        </Link>
+                    </li>
+                </ul>
+            </div>
+            <div className="ensoSuggestionBox">
+                <div className="suggestionHero">Find some sparks!</div>
+                <div className="ensoSuggestionParent">
+                    <div className="try">
+                        cyberpunk samurai under neon rain
+                    </div>
+                    <div className="try">
+                        solar eclipse with fractal petals
+                    </div>
+                    <div className="try">
+                        angel falling into glitch void
+                    </div>
+                    <div className="try">
+                        mountains shaped like piano keys
+                    </div>
+                    <div className="try">
+                        burning rose with barcode stem
+                    </div>
+                </div>
+            </div>
+            <div className="ensoPromptBox">
+                <input className="promptArea" placeholder="Whats on your mind?" name="prompt" />
+                <button className="promptSend"><ArrowUpwardOutlinedIcon /></button>
+            </div>
+        </div>
     )
 }
