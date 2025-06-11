@@ -1,127 +1,137 @@
-.ensoParent{
-    height: 100vh;
-    width: 100vw;
-    background-color: #e3e3e3;
+
+.ensoParent {
+  height: 100vh;
+  width: 100vw;
+  background-color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
 }
-
-
-.ensoNav{
-    background-color: #888888;
-    height: calc(10% - 20px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+.ensoNav {
+  background-color: #888888;
+  height: calc(10% - 20px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
-
-.heroName{
-    user-select: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
+.heroName {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
 }
-
-.hero{
-    font-size: 400%;
+.hero {
+  font-size: 400%;
 }
-
-.subHero{
-    position: relative;
-    bottom: -15px;
+.subHero {
+  position: relative;
+  bottom: -15px;
 }
-
-.ensoNav ul{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;    
-    width: 20%;
+.ensoNav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
 }
-
-.ensoNav ul li{
-    list-style-type: none;
+.ensoNav ul li {
+  list-style-type: none;
 }
-
-.ensoNav ul li *{
-    color: inherit;
+.ensoNav ul li * {
+  color: inherit;
 }
-
-.ensoNav ul li:hover{
-    transform: scale(1.4);
+.ensoNav ul li:hover {
+  transform: scale(1.4);
 }
-
-.ensoSuggestionBox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: calc(75% - 60px);
-    padding: 30px 25% 30px 25%;
-    gap: 1rem;
+.ensoBody {
+  display: flex;
+  flex: 1;
 }
-
-.ensoSuggestionParent{
-    width: 50%;
-    height: 80%;
-    background-color: red;
-    border: 0;
-    border: 2px solid rgb(157, 157, 157);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10%;
-    padding: 2%;
-    background-color: #c7c7c7;
+.leftBox {
+  width: 50%;
+  padding: 20px;
 }
-
-.suggestionHero{
-    font-size: 200%;
+.rightBox {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.try{
-    font-size: large;
-    padding: 10px;
-    border-radius: 5px;
-    width: calc(100% - 20px);
+.ensoSuggestionBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
-
-.try:hover, .try1:hover{
-    background-color: rgb(146, 146, 146);
+.ensoSuggestionParent {
+  width: 80%;
+  background-color: #c7c7c7;
+  border: 2px solid rgb(157, 157, 157);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10%;
+  padding: 2%;
 }
-
-
-.ensoPromptBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 15%;
-    gap: 1rem;
+.suggestionHero {
+  font-size: 200%;
 }
-
-.promptArea{
-    padding: 20px;
-    outline: none;
-    border: 0;
-    border-radius: 40px;
-    width: 30%;
-    font-size: large;
+.try {
+  font-size: large;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 20px);
 }
-
-.promptSend{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    border: 0;
-    outline: none;
-    padding: 13px;
-    background-color:#888888;
-    transform: scale(1.2);
+.try:hover {
+  background-color: rgb(146, 146, 146);
 }
-
-.promptSend:hover{
-    background-color:#7a7a7a;
+.ensoPromptBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 20px;
+}
+.promptArea {
+  padding: 20px;
+  outline: none;
+  border: 0;
+  border-radius: 40px;
+  width: 60%;
+  font-size: large;
+}
+.promptSend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 0;
+  outline: none;
+  padding: 13px;
+  background-color: #888888;
+  transform: scale(1.2);
+}
+.promptSend:hover {
+  background-color: #7a7a7a;
+}
+.shirtMockup {
+  position: relative;
+  width: 700px;
+}
+.tshirtBase {
+  width: 100%;
+  z-index: 1;
+}
+.designOverlay {
+  position: absolute;
+  top: 25%;       
+  left: 38%;      
+  width: 25%;    
+  opacity: 0.9;
+  z-index: 2;
+  mix-blend-mode: multiply; 
 }
