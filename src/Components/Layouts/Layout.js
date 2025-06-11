@@ -4,7 +4,7 @@ import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined
 import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import Brightness1OutlinedIcon from '@mui/icons-material/Brightness1Outlined';
-import { HomeOutlined } from "@mui/icons-material";
+import { HomeOutlined } from "@mui/icons-material";  
 export default function Layout(){
     return(
         <div className="parent">
