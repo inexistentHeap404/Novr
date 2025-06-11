@@ -1,4 +1,3 @@
-
 import {
   AllInclusiveOutlined,
   HomeOutlined,
@@ -13,12 +12,27 @@ import { Link } from "react-router-dom";
 export default function Enso() {
   const [prompt, setPrompt] = useState("");
   const [imageUrl, setImageUrl] = useState("");
+  const [mockupType, setMockupType] = useState("tshirt");
 
   const handleGenerate = async () => {
     const response = await fetch(
       `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}`
     );
     setImageUrl(response.url);
+  };
+
+  const getMockupImage = () => {
+    switch (mockupType) {
+      case "hoodie":
+        return "/assets/img_for_mockup/white_hoodie.png";
+      case "tanktop":
+        return "/assets/img_for_mockup/tanktop.jpg";
+      case "sweatshirt":
+        return "/assets/img_for_mockup/sweatshirt.jpg";
+      case "tshirt":
+      default:
+        return "/assets/img_for_mockup/white_tshirt.jpg";
+    }
   };
 
   return (
@@ -76,14 +90,29 @@ export default function Enso() {
               <ArrowUpwardOutlinedIcon />
             </button>
           </div>
+
+          {/* Clothing Type Selector */}
+          <div className="mockupSelector">
+            <label htmlFor="mockupType">Choose apparel:</label>
+            <select
+              id="mockupType"
+              value={mockupType}
+              onChange={(e) => setMockupType(e.target.value)}
+            >
+              <option value="tshirt">T-shirt</option>
+              <option value="hoodie">Hoodie</option>
+              <option value="tanktop">Tank Top</option>
+              <option value="sweatshirt">Sweatshirt</option>
+            </select>
+          </div>
         </div>
 
         <div className="rightBox">
           <div className="shirtMockup">
             <img
-              src="/assets/img_for_mockup/white_tshirt.jpg"
+              src={getMockupImage()}
               className="tshirtBase"
-              alt="T-shirt"
+              alt="Apparel mockup"
             />
             {imageUrl && (
               <img src={imageUrl} className="designOverlay" alt="Generated" />

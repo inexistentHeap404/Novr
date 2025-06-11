@@ -126,12 +126,30 @@
   width: 100%;
   z-index: 1;
 }
+
 .designOverlay {
   position: absolute;
-  top: 25%;       
-  left: 38%;      
-  width: 25%;    
+  top: 25%;
+  left: 38%;
+  width: 25%;
   opacity: 0.9;
   z-index: 2;
-  mix-blend-mode: multiply; 
+  mix-blend-mode: multiply;
+  border-radius: 20px;
+}
+
+.mockupSelector {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mockupSelector select {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  background-color: #f0f0f0;
+  font-size: 1rem;
 }
