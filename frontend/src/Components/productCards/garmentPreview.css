@@ -1,0 +1,38 @@
+.designer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  margin: auto;
+}
+
+.canvas {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  pointer-events: auto;
+}
+
+.toggle-btn {
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: bold;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  pointer-events: all;
+  z-index: 1;
+}
+
+.toggle-btn:hover {
+  background: #333;
+}

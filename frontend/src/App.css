@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+*{
+    transition: all 0.3s;
+    font-family: "DM Serif Text", serif;
+}
