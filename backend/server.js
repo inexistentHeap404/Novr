@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mysql = require('mysql');
@@ -12,15 +13,15 @@ const formdata = require("form-data")
 app.use(cors());
 app.use(express.json());
 app.use("/userGeneratedDesigns",express.static("userGeneratedDesigns"))
-const secretKey = "novr";
-const pollinationsApiKey = 'AJWdbwoYvRpHq76b';
+const secretKey = process.env.JWT_SECRET;
+const pollinationsApiKey = process.env.POLLINATIONS_API_KEY;
 // -------- DB CONNECTION --------- //
 let connectToDB = ()=>{
     const connection = mysql.createConnection({
-        host: "localhost",
-        user: "root", 
-        password: "Novr@2025cs",
-        database: "novrDB"
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER, 
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME
     });
     connection.connect();
     return connection;
@@ -290,4 +291,4 @@ function isClose(r1, g1, b1, r2, g2, b2, t) {
     Math.abs(b1 - b2) <= t
   );
 }
-app.listen(3002);
+app.listen(process.env.PORT);
