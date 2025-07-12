@@ -8,7 +8,7 @@ const fs = require("fs");
 const axios = require("axios")
 const { createCanvas, loadImage } = require("canvas");
 const formdata = require("form-data")
-
+require("dotenv").config();
 app.use(cors());
 app.use(express.json());
 app.use("/userGeneratedDesigns",express.static("userGeneratedDesigns"))
